@@ -1,7 +1,9 @@
+add_library('sound')
+
 from Fruit import *
 
 class GameManager:
-    def __init__(self, bgimage, framerate, player, timer, fruitimage):
+    def __init__(self, bgimage, framerate, player, timer, fruitimage, itemCatchMusicPlayer):
         self.backgroundimage = bgimage
         self.framerate = framerate
         self.player = player
@@ -22,6 +24,9 @@ class GameManager:
         self.gameDurationSeconds = 30
         
         self.fruitimage = fruitimage
+        
+        self.itemCatchMusicPlayer = itemCatchMusicPlayer
+        
         
     
     def playGame(self):
@@ -98,8 +103,7 @@ class GameManager:
                 itemsToRemove.append(aFruit)
                 
                 #print("CAUGHT!")
-                #itemCatchmusicplayer.play();
-                #itemCatchmusicplayer.rewind();
+                self.itemCatchMusicPlayer.play()
             
             self.displayPoints(self.pointsValue, self.pointsx, self.pointsy)
         

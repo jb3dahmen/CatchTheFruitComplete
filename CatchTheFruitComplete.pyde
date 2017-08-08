@@ -18,6 +18,8 @@ def setup():
     backgroundimage = loadImage("backgroundimages/spacebg.png")
     fruitimage = loadImage("fruitimages/starfruit.png")
     
+    itemCatchMusicPlayer = SoundFile(this, "soundeffects/boip.mp3")
+    
     framerate = 30
     
     fruitimage.resize(50,50)
@@ -25,7 +27,7 @@ def setup():
     player = Player(playerimage, width/2, height - 100)
     gametimer = Timer(width - 200,60)
    
-    gameManager = GameManager(backgroundimage, framerate, player, gametimer, fruitimage)
+    gameManager = GameManager(backgroundimage, framerate, player, gametimer, fruitimage, itemCatchMusicPlayer)
     
     gameManager.timer.start()
     
