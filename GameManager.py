@@ -31,6 +31,7 @@ class GameManager:
     
     def playGame(self):
         
+        self.difficultyChange()
         self.spawn()
         self.moveFruit()
         self.drawWorld()
@@ -81,7 +82,12 @@ class GameManager:
         if(self.timer.currentTime() == self.gameDurationSeconds):
             self.done = True
             self.timer.pause()
-    
+            
+    def difficultyChange(self):
+        #Increase the difficulty every 5 seconds
+        if(self.timer.currentTime() % 5 == 0 and self.timer.currentTime() != 0 and frameCount % self.framerate == 0 and frameCount != 0):
+            self.fruitspeed = self.fruitspeed + 1
+        
     def checkCollision(self):
         
         #store items you want removed in this list, never a good idea to modify a list you are iterating over in python
@@ -138,4 +144,4 @@ class GameManager:
         textFont(self.scorefont, 40)
         text("Good Job!",10,40)
         textFont(self.scorefont,20)
-        text("SCORE: " + self.score,10,70)
+        text("SCORE: " + str(self.score),10,70)

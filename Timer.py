@@ -28,7 +28,7 @@ class Timer:
         
     def pause(self):
         if(self.running):
-            self.timeSoFar = millis() - self.startTime()
+            self.timeSoFar = millis() - self.startTime
             self.running = False
             
     def continueRunning(self):
