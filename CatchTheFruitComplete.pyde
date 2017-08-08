@@ -25,7 +25,7 @@ def setup():
     player = Player(playerimage, width/2, height - 100)
     gametimer = Timer(width - 200,60)
    
-    gameManager = GameManager(backgroundimage, framerate, player, gametimer)
+    gameManager = GameManager(backgroundimage, framerate, player, gametimer, fruitimage)
     
     gameManager.timer.start()
     
@@ -57,6 +57,8 @@ def draw():
     
     if(not gameManager.done):
         gameManager.playGame()
+    else:
+        gameManager.displayGameOverMessage()
 
     
        

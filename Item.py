@@ -11,7 +11,7 @@ class Item:
         image(self.myimage, self.xlocation, self.ylocation)
         
     #This is where we can check if two items have collided or intersected
-    def Intersects(anitem):
+    def Intersects(self, anitem):
         itemwidth = anitem.mywidth
         itemheight = anitem.myheight
         itemxloc = anitem.xlocation
