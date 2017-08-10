@@ -1,12 +1,13 @@
 add_library('sound')
 
 from Fruit import *
+from Player import *
 
 class GameManager:
-    def __init__(self, bgimage, framerate, player, timer, fruitimage, itemCatchMusicPlayer):
+    def __init__(self, bgimage, framerate, playerimage, timer, fruitimage, itemCatchMusicPlayer, backgroundMusicPlayer):
         self.backgroundimage = bgimage
+        self.playerimage = playerimage
         self.framerate = framerate
-        self.player = player
         self.timer = timer
         
         self.done = False
@@ -26,6 +27,11 @@ class GameManager:
         self.fruitimage = fruitimage
         
         self.itemCatchMusicPlayer = itemCatchMusicPlayer
+        self.backgroundMusicPlayer = backgroundMusicPlayer
+        
+        self.player = Player(self.playerimage, width/2, height - 100)
+        
+        
         
         
     

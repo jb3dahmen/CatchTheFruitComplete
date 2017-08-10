@@ -1,5 +1,4 @@
-
-/'''Music Credit: 
+'''Music Credit: 
 
 Peppy and the Firing Squad: http://sampleswap.org/mp3/artist/5101/Peppy--The-Firing-Squad_YMXB-160.mp3
 Artist xnoybis: http://sampleswap.org/artist/xnoybis

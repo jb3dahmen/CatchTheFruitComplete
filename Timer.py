@@ -4,7 +4,6 @@
 
 #This class is used to define the game timer
 #It will control how long the game lasts
-
 class Timer:
     def __init__(self, inX, inY):
         self.x = inX
