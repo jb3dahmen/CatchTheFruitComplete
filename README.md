@@ -1,5 +1,7 @@
 # CatchTheFruitComplete
-Catch the Fruit game implemented using Processing Python mode
+Complete Catch the Fruit game implemented using Processing Python mode, use this to teach game development and Python!
+
+Still in the process of being updated for clarity
 
 How to set up Processing for this project:
 
