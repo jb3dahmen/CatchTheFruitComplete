@@ -2,6 +2,10 @@
 Complete Catch the Fruit game implemented using Processing Python mode, use this to teach game development and Python! Skeleton code for students to fill in will be provided soon, this is the complete working version. 
 
 Still in the process of being updated for clarity
+Functionality to add:
+1. Power ups
+2. More fruits/items
+3. Start and restart menus
 
 How to set up Processing for this project:
 
