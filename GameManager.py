@@ -29,13 +29,13 @@ class GameManager:
         self.score = 0
         #How "fast" the fruits will fall
         self.fruitspeed = 7
-        #The time that will be used to spawn fruits TODO: rename
+        #The time that will be used to spawn fruits
         self.time = 0
-        #This is a list that will store the fruits TODO: rename
+        #This is a list that will store the fruits
         self.items = []
         #How many points the fruits are worth
         self.pointsValue = 0
-        #Where the fruit points will appear once a fruit is caught TODO: maybe this should be an attribute of fruit?
+        #Where the fruit points will appear once a fruit is caught
         self.pointsx = 0
         self.pointsy = 0
         #Checks whether the fruit points should be displayed
@@ -111,13 +111,6 @@ class GameManager:
         
     #Here we move the fruits by using their move() method    
     def moveFruit(self):
-        #/**********************************/
-  
-        #Finish this for loop to make the fruits fall 
-        
-        #/**********************************/
-        
-        
         for i in range(len(self.items)):
             #inside the loop
             aFruit = self.items[i]
@@ -169,7 +162,6 @@ class GameManager:
             self.displayPoints(self.pointsValue, self.pointsx, self.pointsy)
         
         #remove caught fruits from the list  
-        #TODO: maybe remove fruits that move off screen?
         for i in range(len(itemsToRemove)):
             itemToRemove = itemsToRemove[i]
             self.items.remove(itemToRemove)

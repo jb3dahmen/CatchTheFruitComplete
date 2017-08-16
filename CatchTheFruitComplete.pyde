@@ -9,7 +9,9 @@ from GameManager import *
 from Player import *
 from Timer import *
 
-#This function TODO:
+'''The setup() function is run once, when the program starts. 
+It's used to define initial enviroment properties such as screen size and to load media such as images and fonts as the program starts. 
+There can only be one setup() function for each program and it shouldn't be called again after its initial execution.'''
 def setup():
     
     #This sets the size of our game screen or "canvas"
@@ -60,12 +62,6 @@ def setup():
 def keyPressed():
     if (key == CODED):
        
-       #/**********************************/
-       
-       #finish this conditional statement to make the player move left and right
-       
-       #/**********************************/
-       
        #If the left arrow key is pressed move the player left
        if(keyCode == LEFT):
          gameManager.player.moveLeft()
@@ -74,7 +70,13 @@ def keyPressed():
        if(keyCode == RIGHT):
          gameManager.player.moveRight()
 
-#This function TODO:
+'''Called directly after setup(), the draw() function continuously 
+executes the lines of code contained inside 
+its block until the program is stopped or noLoop() is called. 
+draw() is called automatically and should never be called explicitly. 
+All Processing programs update the screen at the end of draw(), 
+never earlier. The number of times draw() executes in each second 
+may be controlled with the frameRate() function.'''
 def draw():
     
     #Using the information stored inside gameManager
